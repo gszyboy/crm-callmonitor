@@ -36,3 +36,6 @@ local.properties
 *.tmp
 *.hermes-tmp*
 /release/
+
+# === Docs (local only, not in repo) ===
+docs/
