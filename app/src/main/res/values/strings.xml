@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">来电推送助手</string>
+    <string name="app_name_en">CRM Call Monitor</string>
+
+    <!-- Main activity -->
+    <string name="title_config">📞 来电推送助手</string>
+    <string name="btn_scan">📷 扫一扫</string>
+    <string name="hint_server_url">服务器地址</string>
+    <string name="hint_dispatcher_id">调度员标识</string>
+    <string name="hint_bind_code">绑定码</string>
+    <string name="btn_save_and_start">保存并启动</string>
+
+    <!-- Scan activity -->
+    <string name="scan_prompt">请扫描二维码</string>
+
+    <!-- Service notification -->
+    <string name="channel_id_callmonitor">callmonitor_service</string>
+    <string name="channel_name_callmonitor">来电推送服务</string>
+    <string name="notification_running">📞 来电推送助手 运行中</string>
+
+    <!-- Status messages -->
+    <string name="config_success">配置成功</string>
+    <string name="config_failed">配置失败</string>
+    <string name="binding_invalid">绑定码无效</string>
+    <string name="device_already_bound">此设备已绑定其他调度员</string>
+    <string name="unbound_detected">已解绑，请联系管理员重新绑定</string>
+    <string name="account_error">调度员账号异常</string>
+    <string name="network_unavailable">网络不可用，请稍后重试</string>
+    <string name="qr_format_error">二维码格式错误</string>
+    <string name="qr_maybe_expired">二维码可能已过期，请让管理员重新生成</string>
+    <string name="camera_permission_required">需要相机权限才能扫码</string>
+    <string name="phone_permission_required">必须授予电话权限才能使用来电监听功能</string>
+    <string name="must_grant_permission">必须授予电话权限</string>
+
+    <!-- Battery optimization dialog -->
+    <string name="battery_opt_title">后台运行引导</string>
+    <string name="battery_opt_message">为确保来电能正常推送，请允许 APP 在后台运行</string>
+    <string name="battery_opt_go">去设置</string>
+    <string name="battery_opt_later">稍后</string>
+    <string name="battery_opt_again_tomorrow">明天再提醒</string>
+
+    <!-- MainActivity validation -->
+    <string name="error_server_url_required">请输入服务器地址</string>
+    <string name="error_dispatcher_id_required">请输入调度员标识</string>
+    <string name="error_bind_code_required">请输入绑定码</string>
+    <string name="error_dispatcher_id_invalid">调度员标识必须是数字</string>
+    <string name="status_binding">正在绑定，请稍候…</string>
+    <string name="status_bind_success">绑定成功，正在启动服务</string>
+    <string name="status_bind_failed">绑定失败，请检查绑定码</string>
+    <string name="status_bind_network_error">网络错误，请稍后重试</string>
+    <string name="config_saved">配置已保存</string>
+    <string name="qr_filled">二维码已回填，请确认后保存</string>
+    <string name="camera_permission_denied">需要相机权限才能扫码</string>
+    <string name="permission_required_title">权限提示</string>
+    <string name="go_to_settings">去设置</string>
+    <string name="cancel">取消</string>
+</resources>

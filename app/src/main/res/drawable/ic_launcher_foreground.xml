@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+
+    <!-- Phone icon (simplified) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,36h28a2,2 0,0 1,2 2v32a2,2 0,0 1,-2 2h-28a2,2 0,0 1,-2 -2v-32a2,2 0,0 1,2 -2zM42,40v24h24v-24h-24z" />
+
+    <!-- Signal wave -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,48l-4,0l0,8l4,0zM42,44l-4,0l0,16l4,0zM46,40l-4,0l0,24l4,0z" />
+
+</vector>

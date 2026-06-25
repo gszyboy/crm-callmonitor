@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.xiyutianhe.crmcallmonitor'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.xiyutianhe.crmcallmonitor'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0.0'
+
+        // zxing-android-embedded requires Java 8+ and minSdk 24+
+        // Uses the embedded barcode scanning, not ML Kit (no GMS dependency)
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    // Keep only the mipmap densities we need
+    aaptOptions {
+        ignoreAssetsPattern '!keep.xml'
+    }
+}
+
+dependencies {
+    // AndroidX Security - EncryptedSharedPreferences for encrypting api_token
+    // Why not plain SharedPreferences: api_token + dispatcher_id are credentials;
+    // if device is rooted, plain SharedPreferences is trivially readable.
+    // EncryptedSharedPreferences uses AES256-GCM backed by Android Keystore.
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+
+    // AndroidX AppCompat + Material for modern UI on older Android
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // ZXing Android Embedded - QR code scanning
+    // Why not ML Kit: Chinese domestic phones lack GMS (Google Mobile Services)
+    // which ML Kit depends on. ZXing is pure Java + camera preview, works on all
+    // Chinese Android phones (Huawei/Xiaomi/OPPO/Vivo).
+    // Why not another library: zxing-android-embedded is the most mature,
+    // actively maintained (4.3.0, Feb 2024), and battle-tested in China.
+    // Specified in AGENTS §3: only this library is allowed.
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+}

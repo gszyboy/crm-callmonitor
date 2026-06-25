@@ -1,0 +1,38 @@
+# === Android ===
+*.iml
+.gradle/
+/build/
+/app/build/
+/captures
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# === IDE ===
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Build outputs ===
+*.apk
+*.aab
+*.aab.1
+*.apk.1
+
+# === Signing & Secrets ===
+*.keystore
+*.jks
+*.bks
+release.keystore.b64
+local.properties
+
+# === Temp & Cache ===
+*.log
+*.tmp
+*.hermes-tmp*
+/release/
